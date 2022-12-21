@@ -13,6 +13,30 @@ $(function() {
 		});
 	});
 
+	$('.modal-effect').on('click', function(e) {
+		e.preventDefault();
+		var effect = $(this).attr('data-effect');
+		$('#modaldemo9').addClass(effect);
+	});
+	// hide modal with effect
+	$('#modaldemo9').on('hidden.bs.modal', function(e) {
+		$(this).removeClass(function(index, className) {
+			return (className.match(/(^|\s)effect-\S+/g) || []).join(' ');
+		});
+	});
+
+	$('.modal-effect').on('click', function(e) {
+		e.preventDefault();
+		var effect = $(this).attr('data-effect');
+		$('#modaldemo10').addClass(effect);
+	});
+	// hide modal with effect
+	$('#modaldemo10').on('hidden.bs.modal', function(e) {
+		$(this).removeClass(function(index, className) {
+			return (className.match(/(^|\s)effect-\S+/g) || []).join(' ');
+		});
+	});
+
 });
 
 	$(document).ready(function() {
